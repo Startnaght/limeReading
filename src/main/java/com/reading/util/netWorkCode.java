@@ -22,12 +22,14 @@ public enum netWorkCode {
 
         SqlConfigError(302), // sql配置错误
 
-        hasNotAccess(303)   // 没有指标查询权限
+        hasNotAccess(303),   // 没有指标查询权限
+
+        nodeZhuCe(3)     //未注册用户
         ;
 
         private int netWorkCode;
 
-        private netWorkCode(int code){
+        netWorkCode(int code){
             this.netWorkCode = code;
         }
 

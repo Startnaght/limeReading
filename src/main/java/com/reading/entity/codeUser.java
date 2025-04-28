@@ -13,6 +13,7 @@ import lombok.Data;
 @Data
 public class codeUser {
     private String name;
+    private double name_uid;
     private double create_Time;
     private int pass;
 //    private String img; //暂时不实现

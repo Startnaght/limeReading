@@ -1,6 +1,5 @@
 package com.reading.util;
 
-import lombok.Data;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -17,7 +16,7 @@ public class reStruct {
     /**
      *
      *
-     * @param data
+     * @param data 带返回的类处理
      * @return
      * @author changan
      * @create 错误信息
@@ -38,7 +37,7 @@ public class reStruct {
     /**
      *
      *
-     * @param
+     * @param data 返回数据处理返回的市data arrlist<>string</>
      * @return requests Success rgion 返回一个HASHMAP 的对象
      * @author changan
      * @create return path networkPath returnTime netWorkCode CHANGAN_KEY
@@ -57,7 +56,7 @@ public class reStruct {
     /**
      *
      *
-     * @param data
+     * @param data 返回具体数据 返回内容以arrlist形式返回
      * @return
      * @author changan
      * @create  now and encryption type

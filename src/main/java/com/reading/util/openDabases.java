@@ -2,10 +2,7 @@ package com.reading.util;
 
 import com.reading.entity.codeUser;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 
 /**
  *
@@ -51,7 +48,9 @@ public class openDabases {
 
     /**
      *
-     *
+     * @param insertSql 传入插入sql语句
+     * @param per 指数器暂时没用
+     * @param data 存储到数据的数据内容
      * @return
      * @author changan
      * @create  node data 需要传入一个判断字符 一个sql后半句  采用拼接组成sql查询条件
@@ -72,5 +71,24 @@ public class openDabases {
             throw new RuntimeException(e);
         }
 
+    }
+
+/**
+ *
+ *
+ * @param per 传入查询数据
+ * @param selectSql  传入查询sql后半部分
+ * @return  返回Resulte类型数据
+ * @author changan
+ * @create 但不稳定sql传入需更改，往后再议~
+ **/
+    public ResultSet selectData(double per,String selectSql) {
+        try {
+            Statement Statement = connection.createStatement();
+            ResultSet  resultSet = Statement.executeQuery("select" + per +selectSql);
+            return resultSet;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
